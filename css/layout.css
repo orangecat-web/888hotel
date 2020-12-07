@@ -1,0 +1,213 @@
+/*google web fonts*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanssc.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900');
+
+html {min-height: 100%; font-size: 16px} /*16px x 93.75% = 15px 網站字型大小預設值*/
+body {
+    height: 100%;
+    background: #fff;
+    font-family: 'Roboto', 'Noto Sans TC', MS UI Gothic, MS Gothic, 'Font Awesome\ 5 Brands', 'Font Awesome\ 5 Free', 'Font Awesome\ 5 Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: .05rem
+}
+* { /*使用邊框不影響 div or table 本身寬度設定*/
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+/*font awesome setting*/
+::before, ::after {font-weight: 900; margin-right: .5rem; margin-left: .5rem}
+
+input, select, textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #221e1f;
+    color: #221e1f;
+    padding: .5rem .75rem
+}
+select {padding-bottom: .75rem}
+input:hover, select:hover, textarea:hover {
+    border: 1px solid #e4e4e4;
+    outline: none
+}
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #ff3a1e;
+    outline: none
+}
+input::placeholder, textarea::placeholder {font-weight: 300; color: #afafaf}
+textarea {resize:none}
+input[type="checkbox"], input[type="radio"] {width: auto !important}
+
+button {
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: .5rem;
+    font-weight: 400;
+    color: #333;
+    padding: .25rem 1.5rem
+}
+button:hover {
+    background: #ff3a1e;
+    border-color: #ff3a1e;
+    color: #fff
+}
+button[type="submit"], button.addCart {background: #ff3a1e; border-color: #ff3a1e; color: #fff}
+button[type="submit"]:hover, button.addCart:hover {background: #c12913; border-color: #c12913}
+
+a:link, a:visited {color: #221e1f; text-decoration: none; padding: 1px}
+a:hover {background: none; color: #da0012; text-decoration: none}
+a, button {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto!important;
+    border: none
+}
+
+*[onclick], button {cursor: pointer}
+
+h1 {font-size: 1.73rem}
+h2 {font-size: 1.5rem}
+p, li {font-size: 1rem}
+li {list-style: none}
+
+div.clearfix {clear: both}
+
+/*goTOP use only*/
+.cd-top {
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/layout/cd-top-arrow.svg) no-repeat center 50% #5273a6;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-indent: 100%;
+    white-space: nowrap;
+    visibility: hidden;
+    display: inline-block;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 9999;
+    /* image replacement properties */
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s
+}
+.cd-top.cd-is-visible {visibility: visible; opacity: .75}
+/* the button becomes visible */
+/* .cd-top.cd-fade-out {opacity: .25} */
+/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+.cd-top:hover {background: url(../images/layout/cd-top-arrow.svg) no-repeat center 50% #ff3a1e; opacity: 1} /*改變按鈕顏色*/
+@media only screen and (min-width: 1024px) {
+    .cd-top {right: 30px; bottom: 30px}
+}
+@media only screen and (min-width: 768px) {
+    .cd-top {right: 1.5rem; bottom: 6.5rem}
+}
+
+/*header*/
+header {background: rgba(255, 255, 255, .85)}
+a.navbar-brand>img {width: 6.25vw; padding-left: 1rem;}
+
+/*nav*/
+.bg-light {background: none !important; position: relative;}
+
+/*top nav*/
+div.topNav {
+    position: absolute;
+    top: 1rem;
+    right: 2rem
+}
+dl.topNav, dl.topNav>dd {margin-bottom: 0;}
+dl.topNav>dd {padding-left: .5rem;}
+dl.topNav>dd>a>img {max-width: 2.25vw}
+
+.navbar-nav {border-top: #fff 1px solid}
+/*選單設定*/
+.navbar-light .navbar-nav .nav-link {
+    border-bottom: 2px solid rgba(255, 58, 30, 0);
+    font-size: 1.15rem;
+    color: #333;
+    letter-spacing: .15rem;
+    text-align: center;
+    line-height: 1rem
+}
+.navbar-light .navbar-nav .nav-link>span {font-size: .75rem; letter-spacing: 0}
+li.nav-item {padding: 0}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {color: #333}
+.dropdown-toggle::after {display: none}
+.dropdown:hover>.dropdown-menu {display: block}
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.85) !important;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    padding: 1rem;
+    top: 3rem;
+    left: -2.3rem
+}
+a.dropdown-item {
+    border-bottom: #fff 1px solid;
+    color: #fff;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem
+}
+.dropdown-item:focus, .dropdown-item:hover {background: none; color: #fff}
+a.dropdown-item:last-of-type {border-bottom: none; margin-bottom: 0; padding-bottom: 0}
+
+/*選單設定滑鼠滑過效果*/
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {color: #da0012}
+
+/*moblie nav*/
+.navbar-light .navbar-toggler {border: #333 1px solid !important}
+button.navbar-toggler>i {color: #333}
+button.navbar-toggler>i::before, button.navbar-toggler>i::after {margin: 0}
+.navbar-light .navbar-toggler:hover {background: none; border-color: #ff3a1e !important}
+.navbar-light .navbar-toggler:hover>i {color: #ff3a1e}
+
+div.slidebars {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: rgba(0, 0, 0, .15) 1px 0 5px;
+    padding: 1rem
+}
+div.closeBtn {text-align: right}
+div.closeBtn>button {background: none; border: none; color: #fff}
+dl.slidebarNav {text-align: center; margin-bottom: 0}
+dl.slidebarNav>dd {
+    border-bottom: #ccc 1px solid;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem
+}
+dl.slidebarNav>dd>a {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.15rem;
+}
+dl.slidebarNav>dd>a>span {font-size: 1rem}
+dl.slidebarNav>dd:last-of-type {border: none; margin-bottom: 0; padding-bottom: 0}
+
+
+/*footer*/
+footer {background: #e3e3e3}
+section.copyright {text-align: center}

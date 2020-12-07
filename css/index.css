@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*jssor slider loading skin double-tail-spin css*/
+.jssorl-004-double-tail-spin img {
+    animation-name: jssorl-004-double-tail-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-004-double-tail-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider arrow skin 053 css*/
+.jssora053 {display:block;position:absolute;cursor:pointer;}
+.jssora053 .a {fill:none;stroke:#fff;stroke-width:640;stroke-miterlimit:10;}
+.jssora053:hover {opacity:.8;}
+.jssora053.jssora053dn {opacity:.5;}
+.jssora053.jssora053ds {opacity:.3;pointer-events:none;}
+
+div.title>h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .25rem;
+    margin-bottom: 0
+}
+div.title>h2>span {
+    color: #da0012;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin-left: .25rem
+}
+
+/*branch*/
+dl.branch>dd {}
+dl.branch>dd>a>p {-webkit-filter:grayscale(1); color: #999}
+dl.branch>dd>a:hover>p {-webkit-filter:grayscale(0); color: #000}
+dl.branch>dd>a>p>span>img {opacity: .5;}
+dl.branch>dd>a:hover>p>span>img {opacity: 1;}
+dl.branch>dd>a>p>span:nth-of-type(2) {font-size: .8rem; text-align: center;}
+dl.branch>dd>a>p>span:nth-of-type(2)>b {font-size: 1.35rem;font-weight: 400;}
+
+/*news*/
+dl.newsList>dd:last-of-type {text-align: center}
+dl.newsList>dd>a {
+    border: 1px solid #221e1f;
+    border-radius: .25rem;
+    padding: .5rem 1.5rem
+}
+figure.news {margin-bottom: 0}
+figure.news>p {
+    height: 100vh;
+    max-height: 216px;
+    margin-bottom: 0;
+}
+figure.news>p>img {
+    max-height: 216px;
+}
+figure.news>figcaption {
+    padding: .5rem 0
+}
+figure.news>figcaption>h4, figure.news>figcaption>p {
+    /*單行文字限制*/
+    overflow:hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+}
+figure.news>figcaption>p {
+    font-weight: 500;
+    color: #da0012;
+    margin-bottom: 0;
+}
+figure.news>figcaption>h4 {font-weight: 300}
